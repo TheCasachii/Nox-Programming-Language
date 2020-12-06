@@ -21,7 +21,7 @@ Besides the registers, NVM also allows for RAM. There is 1 KB (1024B) of RAM in 
 **The program is stored in the upper 768B of RAM.** With each command taking up 3B, the maximum amount of code saved in RAM is 256 lines.
 
 ## Save files, memory dumps
-First, see [Compilation process details](Compilation.md#details).
+First, see [Compilation process details](Compile.md#details).
 
 The .bin files (output from compiler) are just memory dumps. This allows the developer to include a starting value for the data inside the first 256B of RAM.
 
