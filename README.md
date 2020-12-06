@@ -38,7 +38,7 @@ To execute NPL, you need to run it from the terminal/cmd, as it requires argumen
 NPL is a command-line program. In order to work properly, it requires arguments to be passed.
 
 The basic structure is:
-`ruby nox_lang.rb <Method> [Input] [Output]`
+`ruby nox_exec.rb <Method> [Input] [Output]`
 
 #### Method
 The method parameter specifies the action the program has to execute. There is a total of **five available values**:
