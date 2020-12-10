@@ -28,3 +28,19 @@ The .bin files (output from compiler) are just memory dumps. This allows the dev
 This feature is commonly used for storing the alphabet, as the `chr` command doesn't support direct [ASCII](https://en.wikipedia.org/wiki/Ascii) codes (See [Syntax](Syntax.md))
 
 Binary dumps are 1KB in size, as they represent the whole RAM.
+
+## Flags register
+Flags register is a 3-bit register.
+
+` (0 0 0) - (ZERO_FLAG CARRY_FLAG ODD_FLAG) `
+
+As seen above, the flags are stored here in binary form next to each other. The FR is updated after each line of code.
+
+### Zero flag
+The zero flag is active (true) if A register is **equal to 0**.
+
+### Carry flag
+The carry flag is set when the A register was **above 255 or below 0**.
+
+### Odd flag
+The odd flag is true when A is **odd**.
