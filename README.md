@@ -7,7 +7,7 @@ Here's a list of helpful documentations:
 - [Architecture](Architecture.md)
 - [Compilation](Compile.md)
 - [Interactive console](Console.md)
-- [Runtime](Run.md)
+- [Runtime](Run.md)(WIP)
 - [Syntax](Syntax.md)
 
 ## Installation
