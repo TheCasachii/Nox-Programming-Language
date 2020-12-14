@@ -10,6 +10,9 @@ Here's a list of helpful documentations:
 - [Runtime](Run.md)(WIP)
 - [Syntax](Syntax.md)
 
+## Updates, bugfixes
+You can find NPL update info on the [Updates](Updates.md) page. You can look up bugfixes and new features of the language there :-)
+
 ## Installation
 In order to install Nox, go to the desired installation directory and clone the repository using git clone:
 
