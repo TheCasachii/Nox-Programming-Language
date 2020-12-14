@@ -413,7 +413,7 @@ module NoxLang
           return
         when 0x1D
           # CALLPTR
-          addr = (ip - 256) / 3
+          addr = ((ip - 256) / 3 + 2) & 0xFF
           memory[p0] = addr
         else
           puts ERROR_OPC_RANGE
