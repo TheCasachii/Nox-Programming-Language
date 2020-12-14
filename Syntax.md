@@ -33,6 +33,7 @@ List of commands with short descriptions:
 - [MOV](#mov) - move a value between cells
 - [CPY](#cpy) - copy a value between cells
 - [DEAL](#deal) - sets the deal statement
+- [CALLPTR](#callptr) - (NEW) sets up a return pointer for a subroutine call
 
 ## Concepts
 This section explains concepts used later in the document.
@@ -184,6 +185,11 @@ Example: `jnz 0x68` => `10 68 00` => `if not ZERO_FLAG then IP = RAM[0x68] * 3 +
 Branches **if the odd flag is set to false** (See: [Flags](Architecture.md#flags-register))
 
 Example: `je 0x31` => `11 31 00` => `if not ODD_FLAG then IP = RAM[0x31] * 3 + 256`
+
+#### CALLPTR
+Sets up a return address for subroutine calls.
+
+Example: `callptr 0xff` => `1c ff 00` => `RAM[0xff] = ((IP - 256) * 3 + 2) & 0xFF`
 
 ### Interface commands
 I/O commands.
