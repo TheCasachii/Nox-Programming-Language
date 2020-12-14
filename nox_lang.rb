@@ -17,7 +17,7 @@ NULL_CHR        = (0).chr.to_s
 MAX_PRGL        = 768
 MAX_PRDT        = 256
 
-LEGAL_COMMANDS = %w[nop push pull add sub mod mul div xor and or jmp jc jz jo jnc jnz je in set drop chr out shr shl ain mov cpy, hlt]
+LEGAL_COMMANDS = %w[nop push pull add sub mod mul div xor and or jmp jc jz jo jnc jnz je in set drop chr out shr shl ain mov cpy hlt callptr]
 COMMAND_ARGCNT =   [0,  1,   1,   1,  1,  1,  1,  1,  1,  1,  1, 1,  1, 1, 1, 1,  1,  1, 1, 2,  1,   1,  1,  1,  1,  1,  2,  2  , 1  ]
 DEAL_STATES    = %w[error cut]
 
@@ -411,6 +411,10 @@ module NoxLang
           # HLT
           puts "Program exit with code: 0x#{NoxLang.hex(p0)}"
           return
+        when 0x1D
+          # CALLPTR
+          addr = (ip - 256) / 3
+          memory[p0] = addr
         else
           puts ERROR_OPC_RANGE
           return
