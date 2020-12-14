@@ -189,7 +189,7 @@ Example: `je 0x31` => `11 31 00` => `if not ODD_FLAG then IP = RAM[0x31] * 3 + 2
 #### CALLPTR
 Sets up a return address for subroutine calls.
 
-Example: `callptr 0xff` => `1c ff 00` => `RAM[0xff] = ((IP - 256) * 3 + 2) & 0xFF`
+Example: `callptr 0xff` => `1c ff 00` => `RAM[0xff] = ((IP - 256) / 3 + 2) & 0xFF`
 
 ### Interface commands
 I/O commands.
