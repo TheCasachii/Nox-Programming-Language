@@ -33,6 +33,7 @@ List of commands with short descriptions:
 - [MOV](#mov) - move a value between cells
 - [CPY](#cpy) - copy a value between cells
 - [DEAL](#deal) - sets the deal statement
+- [HLT](#hlt) - stops the execution
 - [CALLPTR](#callptr) - (NEW) sets up a return pointer for a subroutine call
 
 ## Concepts
@@ -189,7 +190,7 @@ Example: `je 0x31` => `11 31 00` => `if not ODD_FLAG then IP = RAM[0x31] * 3 + 2
 #### CALLPTR
 Sets up a return address for subroutine calls.
 
-Example: `callptr 0xff` => `1c ff 00` => `RAM[0xff] = ((IP - 256) / 3 + 2) & 0xFF`
+Example: `callptr 0xff` => `1d ff 00` => `RAM[0xff] = ((IP - 256) / 3 + 2) & 0xFF`
 
 ### Interface commands
 I/O commands.
@@ -257,3 +258,9 @@ Two values are available:
 `deal cut` - cuts the value, leaving the last 8 bits
 
 ***I recommend putting the deal statement at the beginning of your file, so it applies to the whole file.***
+
+#### HLT
+Stops the execution of code. Displays 1B of status on the screen.
+The status is immediate (not from memory but from program) but can display memory value when used with pointers.
+
+Example: `hlt 0xff` => `1c ff 00` => `print 'Program exit with code: 0x' + 0xff.get_hex_string(); exit()`

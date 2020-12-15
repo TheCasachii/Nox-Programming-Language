@@ -4,14 +4,15 @@ The repository for the Nox language. Created for CTF challenge.
 This README file will teach you how to install and execute Nox Parser/Compiler.
 
 Here's a list of helpful documentations:
-- [Architecture](Architecture.md)
-- [Compilation](Compile.md)
-- [Interactive console](Console.md)
-- [Runtime](Run.md)(WIP)
-- [Syntax](Syntax.md)
+- [Architecture](Docs/Architecture.md)
+- [Compilation](Docs/Compile.md)
+- [Interactive console](Docs/Console.md)
+- [Runtime](Docs/Run.md)(WIP)
+- [Syntax](Docs/Syntax.md)
+- [Alphabet injection](Docs/Alphabet-Injection.md)
 
 ## Updates, bugfixes
-You can find NPL update info on the [Updates](Updates.md) page. You can look up bugfixes and new features of the language there :-)
+You can find NPL update info on the [Updates](Docs/Updates.md) page. You can look up bugfixes and new features of the language there :-)
 
 ## Installation
 In order to install Nox, go to the desired installation directory and clone the repository using git clone:
@@ -20,9 +21,9 @@ In order to install Nox, go to the desired installation directory and clone the 
 
 **Alternatively, you can download and unpack the [zip archive](https://github.com/TheCasachii/Nox-Programming-Language/archive/main.zip)**
 
-Then go to the repo folder:
+Then go to the Src folder:
 
-`cd Nox-Programming-Language`
+`cd Nox-Programming-Language/Src`
 
 From here, you can execute the main file and start using NPL.
 
@@ -50,7 +51,7 @@ The method parameter specifies the action the program has to execute. There is a
 - --compile, -c => Compile [Input], save compiled code to [Output]
 - --run, -r => Execute compiled binary file [Input]. Output is not used in this case.
 - --decompile, -d => Decompile [Input], save source code to [Output]. Decompilation is not available in the CTF challenge (It was not uploaded to GitHub, so you won't find it here
-- --console, -i => Interactive console. Neither [Input] nor [Output] Are used in this scenario. For further reference, see [Interactive Console](Console.md).
+- --console, -i => Interactive console. Neither [Input] nor [Output] Are used in this scenario. For further reference, see [Interactive Console](Docs/Console.md).
 
 #### Input
 The input parameter should contain **the path to input file** used in operation.
